@@ -1,0 +1,17 @@
+.bf-footer {
+  position: relative;
+  height: 50px;
+  max-width: var(--wrap);
+  margin: 0 auto;
+  color: var(--white);
+  overflow: hidden;
+  
+  &__btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 90px;
+    margin: 0 auto;
+  }
+}

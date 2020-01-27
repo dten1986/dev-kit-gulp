@@ -1,0 +1,139 @@
+@import './scss-variables';
+@import './mixins.scss';
+
+html,
+button,
+input,
+textarea,
+a {
+  font-family: 'HelveticaNeue', sans-serif;
+  color: var(--text);
+}
+
+strong {
+  font-weight: 700 !important;
+}
+
+.bf-h1,
+h1,
+%bf-h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2em;
+}
+
+.bf-h2,
+h2,
+%bf-h2 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.2em;
+}
+
+.bf-h3,
+h3,
+%bf-h3 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.2em;
+}
+
+.bf-h4,
+h4,
+%bf-h4 {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.25em;
+}
+
+.bf-h5,
+h5,
+%bf-h5 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25em;
+}
+
+.bf-lead,
+%bf-lead {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+
+.bf-reg,
+%bf-reg {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6em;
+}
+
+.bf-txt-strong,
+%bf-txt-strong {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+.bf-small,
+%bf-small  {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+
+// Colors
+.bf-blue {
+  color: var(--blue);
+}
+
+.bf-blue-2 {
+  color: var(--blue-2);
+}
+
+.bf-red {
+  color: var(--red);
+}
+
+.bf-yellow {
+  color: var(--yellow);
+}
+
+.bf-orange {
+  color: var(--orange);
+}
+
+.bf-green {
+  color: var(--green);
+}
+
+.bf-white {
+  color: var(--white);
+}
+
+.bf-black-1 {
+  color: var(--black-1);
+}
+
+.bf-grey-1 {
+  color: var(--grey-1);
+}
+
+.bf-grey-2 {
+  color: var(--grey-2);
+}
+
+.bf-grey-3 {
+  color: var(--grey-3);
+}
+
+// Other
+.bf-txt-upper {
+  text-transform: uppercase;
+}
+
+.bf-txt-ellips {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

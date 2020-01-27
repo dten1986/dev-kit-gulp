@@ -1,0 +1,132 @@
+{% macro btnBase(text = "", type="button", color="", dataType=null, dataValue=[], class = "", id = "") %}
+  <button type="{{type}}"
+        {% if class %}
+        class="et-btn {{color}} {{ class }}"
+        {% elif color %}
+        class="et-btn {{color}}"
+        {% else %}
+        class="et-btn"
+        {% endif %}
+
+        {% if dataType %}
+          {% for item in dataType %}
+            data-{{item}}="{{dataValue[loop.index - 1]}}"
+          {% endfor %}
+        {% endif %}
+
+        {% if id %}
+        id="{{id}}"
+        {% endif %}
+        >
+    <span>
+      {{ text }}
+    </span>
+  </button>
+{% endmacro %}
+
+{# Links #}
+{#{% macro linkBase(text = "", link="#", color="", class = "", id = "") %}
+  <a href="{{link}}"
+        {% if class %}
+        class="et-btn {{color}} {{ class }}"
+        {% elif color %}
+        class="et-btn {{color}}"
+        {% else %}
+        class="et-btn"
+        {% endif %}
+
+        {% if id %}
+        id="{{id}}"
+        {% endif %}
+        >
+    <span>
+      <span>
+        {{ text }}
+      </span>
+    </span>
+  </a>
+{% endmacro %}
+#}
+
+{# Buttons #}
+{% macro btnBase(text = "", color = "", class = "", id = "") %}
+  <button type="button"
+    class="bf-btn bf-reg {{color}} {% if class %}{{ class }}{% endif %}"
+    {% if id %}
+      id="{{id}}"
+    {% endif %}
+    >
+      <span>
+        <span>
+          {{text}}
+        </span>
+      </span>
+    </button>
+{% endmacro %}
+
+{% macro btnLead(text = "", color = "", class = "", id = "") %}
+  <button type="button"
+    class="bf-btn bf-btn--lead bf-lead {{color}} {% if class %}{{ class }}{% endif %}"
+    {% if id %}
+      id="{{id}}"
+    {% endif %}
+    >
+      <span>
+        <span>
+          {{text}}
+        </span>
+      </span>
+    </button>
+{% endmacro %}
+
+{% macro btnBack(text = "", color = "", class = "", id = "") %}
+  <button type="button"
+    class="bf-btn bf-btn--back bf-reg {{color}} {% if class %}{{ class }}{% endif %}"
+    {% if id %}
+      id="{{id}}"
+    {% endif %}
+    >
+      <span>
+        <svg class="bf-icons bf-icon-arrow-l">
+          <use xlink:href="#icon-arrow-l"/>
+        </svg>
+        <span>
+          {{text}}
+        </span>
+      </span>
+    </button>
+{% endmacro %}
+
+{% macro btnWhite(text = "", color = "", class = "", id = "") %}
+  <button type="button"
+    class="bf-btn bf-btn--white bf-reg {{color}} {% if class %}{{ class }}{% endif %}"
+    {% if id %}
+      id="{{id}}"
+    {% endif %}
+    >
+      <span>
+        <span>
+          {{text}}
+        </span>
+      </span>
+    </button>
+{% endmacro %}
+
+{% macro btnSearch(text = "", color = "", class = "", id = "") %}
+  <button type="button"
+    class="bf-btn bf-btn--search bf-lead {{color}} {% if class %}{{ class }}{% endif %}"
+    {% if id %}
+      id="{{id}}"
+    {% endif %}
+    >
+      <span>
+        <span>
+          {{text}}
+        </span>
+        <svg class="bf-icons bf-icon-search">
+          <use xlink:href="#icon-search"/>
+        </svg>
+      </span>
+    </button>
+{% endmacro %}
+

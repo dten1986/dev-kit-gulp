@@ -1,0 +1,36 @@
+.bf-footer {
+  height: 50px;
+  padding: 1em var(--halfGap);
+  color: var(--grey-2);
+  overflow: hidden;
+  
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    max-width: var(--wrap);
+    margin: 0 auto;
+
+    & > span {
+      flex: 1;
+    }
+
+    &-links {
+      flex: 1;
+      min-width: 315px;
+
+      & > a {
+        padding: 0 10px;
+        border-left: 1px solid var(--grey-2);
+
+        &:first-child {
+          border-left: none;
+        }
+      }
+    }
+
+    & > a {
+      flex: 1;
+      text-align: right;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{% import "./_svg-icons.nj" as svg %}
+
+{% macro inputTxt(type = "", placeholder = "", class = "", id = "", name = "") %}
+  <input type="{{type}}" placeholder="{{placeholder}}"
+        class="bf-input-txt bf-lead {% if class %}{{ class }}{% endif %}"
+
+        {% if id %}
+        id="{{id}}"
+        {% endif %}
+
+        {% if name %}
+        name="{{name}}"
+        {% endif %}
+        >
+{% endmacro %}
+
+{% macro inputSearch(type = "", placeholder = "", class = "", id = "", name = "") %}
+  <div class="bf-input-block bf-input-block--search {% if class %}{{ class }}{% endif %}">
+    <input type="{{type}}" placeholder="{{placeholder}}"
+      class="bf-input-txt bf-input-txt--search bf-lead"
+
+      {% if id %}
+      id="{{id}}"
+      {% endif %}
+
+      {% if name %}
+      name="{{name}}"
+      {% endif %}
+      >
+    <button class="bf-input-block__btn-clear">
+      {{ svg.icon('icon-close') }}
+    </button>
+    <button class="bf-input-block__btn-go">
+      {{ svg.icon('icon-search') }}
+    </button>
+  </div>
+{% endmacro %}

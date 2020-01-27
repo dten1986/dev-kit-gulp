@@ -1,0 +1,122 @@
+@import '../common/mixins.scss';
+@import '../common/scss-variables.scss';
+
+.bf-btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: var(--white);
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 0;
+
+  * {
+    pointer-events: none;
+  }
+
+  & > span {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font: inherit;
+    transition: all 0.2s;
+
+    & > span {
+      font: inherit;
+      margin: auto;
+    }
+
+    svg {
+      position: relative;
+      left: -0.4em;
+      width: 26px;
+      margin-right: 0.1em;
+      color: var(--white);
+    }
+  }
+
+  &:hover {
+    filter: brightness(105%);
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--base-color);
+    content: '';
+    z-index: -1;
+    transition: all 0.2s;
+    pointer-events: none;
+  }
+
+  &--lead {
+    padding-left: 1.33em;
+    padding-right: 1.33em;
+  }
+
+  &--back {
+    height: 24px;
+    line-height: 24px;
+
+    & > span {
+      & > svg {
+        left: 0;
+        width: 10px;
+        margin-right: 3px;
+      }
+    }
+  }
+
+  &--white {
+    height: 32px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: var(--base-color);
+    font-weight: 700;
+    line-height: 32px;
+
+    &:after {
+      background-color: var(--white);
+    }
+  }
+
+  &--search {
+    height: 80px;
+    line-height: 80px;
+    padding: 0 0;
+
+    & > span {
+      & > svg {
+        max-height: 100%;
+        height: 2.5em;
+        width: 2.5em;
+        margin: 0 -5px 0 18px;
+      }
+    }
+
+    &:after {
+      background-color: transparent;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    .active & {
+      opacity: 0.4;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}

@@ -1,0 +1,310 @@
+{% import "./macros/_svg-icons.nj" as svg %}
+{% import "./macros/_buttons.nj" as btn %}
+{% import "./macros/_inputs.nj" as input %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    {% include './partials/_head.nj' %}
+  </head>
+
+  <style>
+    :root {
+      --base-color: #21A0D2;
+    }
+
+    ul > li {
+      padding: 5px 0;
+    }
+    .bf-fram-colors > li {
+      display: flex;
+      align-items: center;
+    }
+    .bf-fram-colors > li > span {
+      display: block;
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      box-shadow: 0 0 4px #000;
+    }
+    .bf-fram-block {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  </style>
+
+  <body>
+    <div class="bf-wrap">
+
+      <div class="bf-fram-block">
+        <hr>
+        <p class="bf-h5">Color</p>
+        <hr>
+        <ul class="bf-lead bf-fram-colors">
+          <li>
+            <span style="background:var(--blue)"></span>var(--blue) #21A0D2;
+          </li>
+          <li>
+            <span style="background:var(--blue-2)"></span>var(--blue-2) #004a96;
+          </li>
+          <li>
+            <span style="background:var(--red)"></span>var(--red): #c50022
+          </li>
+          <li>
+            <span style="background:var(--yellow)"></span>var(--yellow): #65ac2e
+          </li>
+          <li>
+            <span style="background:var(--orange)"></span>var(--orange): #f39500
+          </li>
+          <li>
+            <span style="background:var(--green)"></span>var(--green): #00793a
+          </li>
+          <li>
+            <span style="background:var(--grey-1)"></span>var(--grey-1): #E4E4E4
+          </li>
+          <li>
+            <span style="background:var(--grey-2)"></span>var(--grey-2): #808080
+          </li>
+          <li>
+            <span style="background:var(--grey-3)"></span>var(--grey-3): #F0F0F0
+          </li>
+          <li>
+            <span style="background:var(--white)"></span>var(--white): #FFFFFF
+          </li>
+          <li>
+            <span style="background:var(--black-1)"></span>var(--black-1): #333333
+          </li>
+        </ul>
+      </div>
+
+      <div class="bf-fram-block">
+        <hr>
+        <p class="bf-h5">Typography</p>
+        <hr>
+        <ul class="bf-fram-fonts">
+          <li>
+            <p class="bf-h1">.bf-h1 48px</p>
+          </li>
+          <li>
+            <p class="bf-h2">.bf-h2 32px</p>
+          </li>
+          <li>
+            <p class="bf-h3">.bf-h3 28px</p>
+          </li>
+          <li>
+            <p class="bf-h4">.bf-h4 22px</p>
+          </li>
+          <li>
+            <p class="bf-h5">.bf-h5 16px</p>
+          </li>
+          <li>
+            <p class="bf-lead">.bf-lead 24px</p>
+          </li>
+          <li>
+            <p class="bf-reg">.bf-reg 16px</p>
+          </li>
+          <li>
+            <p class="bf-txt-strong">.bf-txt-strong 16px</p>
+          </li>
+          <li>
+            <p class="bf-txt-ceo">.bf-txt-ceo 16px</p>
+          </li>
+          <li>
+            <p class="bf-small">.bf-small 12px</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bf-fram-block">
+        <hr>
+        <p class="bf-h5">Typography colors</p>
+        <hr>
+        <ul class="bf-lead bf-fram-fonts">
+          <li>
+            <p class="bf-blue">.bf-blue</p>
+          </li>
+          <li>
+            <p class="bf-blue-2">.bf-blue-2</p>
+          </li>
+          <li>
+            <p class="bf-red">.bf-red</p>
+          </li>
+          <li>
+            <p class="bf-yellow">.bf-yellow</p>
+          </li>
+          <li>
+            <p class="bf-orange">.bf-orange</p>
+          </li>
+          <li>
+            <p class="bf-green">.bf-green</p>
+          </li>
+          <li>
+            <p class="bf-white" style="background: #ccc;">.bf-white</p>
+          </li>
+          <li>
+            <p class="bf-black-1">.bf-black-1</p>
+          </li>
+          <li>
+            <p class="bf-grey-1">.bf-grey-1</p>
+          </li>
+          <li>
+            <p class="bf-grey-2">.bf-grey-2</p>
+          </li>
+          <li>
+            <p class="bf-grey-3">.bf-grey-3</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bf-fram-block">
+        <hr>
+        <p class="bf-h5">Typography others</p>
+        <hr>
+        <ul class="bf-lead bf-fram-fonts">
+          <li>
+            <p class="bf-txt-upper">.bf-txt-upper</p>
+          </li>
+          <li>
+            <p class="bf-txt-ellips" style="max-width: 200px;">.bf-txt-ellips Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ullam repudiandae minus, repellat eius sequi nobis quasi aperiam vel earum deserunt rerum modi quia amet ratione tempore libero temporibus architecto!</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bf-fram-block">
+        <hr>
+        <p class="bf-h5">Buttons</p>
+        <hr>
+        <ul>
+          <li>
+            {{ btn.btnBase("Remove all") }}
+          </li>
+          <li>
+            {{ btn.btnLead("Info") }}
+          </li>
+          <li>
+            {{ btn.btnBack("Back") }}
+          </li>
+          <li style="background-color: #CCCCCC; padding: 10px;">
+            {{ btn.btnWhite("Get your sample today!") }}
+          </li>
+          <li style="background-color: #CCCCCC; padding: 10px; margin-top: 10px;">
+            {{ btn.btnSearch("Search") }}
+          </li>
+        </ul>
+      </div>
+
+      <div class="bf-fram-block">
+        <hr>
+        <p class="bf-h5">Links</p>
+        <hr>
+        <ul>
+          <li>
+            <a href="#" class="bf-link bf-blue">.bf-link</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bf-fram-block">
+        <hr>
+        <p class="bf-h5">Inputs</p>
+        <hr>
+        input.inputTxt(type ="", placeholder = "", class = "", id = "")
+        <div style="padding: 5px;">
+          {{ input.inputTxt("text", placeholder="placeholder") }}
+        </div>
+        <hr>
+        input.inputSearch(type ="", placeholder = "", class = "", id = "")
+        <div style="padding: 5px;">
+          {{ input.inputSearch("text", placeholder="placeholder") }}
+        </div>
+      </div>
+
+      <div class="bf-fram-block">
+        <hr>
+        <p class="bf-h5">Layout settings</p>
+        <hr>
+        <ul class="bf-lead">
+          <li>Max-width content: var(--wrap) - 960px</li>
+          <li>Base gap of columns content: var(--gap) - 20px</li>
+          <li>Side paddings of content: var(--halfGap) - 10px</li>
+        </ul>
+      </div>
+
+      <div class="bf-fram-block">
+        <hr>
+        <p class="bf-h5">Icons</p>
+        <hr>
+        {#{% include "../../images/common/header/logo.svg" %} - <strong>url('../images/common/header/logo.svg')</strong>#}
+        <p style="margin: 20px 0;">
+          <strong>svg.icon('name')</strong>
+        </p>
+        <ul>
+          <li style="background-color: #CCCCCC;">
+            {{ svg.icon('icon-search') }} - <strong>icon-search</strong>
+          </li>
+          <li>
+            {{ svg.icon('icon-arrow-b') }} - <strong>icon-arrow-b</strong>
+          </li>
+          <li>
+            {{ svg.icon('icon-arrow-r') }} - <strong>icon-arrow-r</strong>
+          </li>
+          <li>
+            {{ svg.icon('icon-arrow-l') }} - <strong>icon-arrow-l</strong>
+          </li>
+          <li>
+            {{ svg.icon('icon-arrow-r-circle') }} - <strong>icon-arrow-r-circle</strong>
+          </li>
+          <li>
+            {{ svg.icon('icon-close') }} - <strong>icon-close</strong>
+          </li>
+          <li>
+            {{ svg.icon('icon-contact') }} - <strong>icon-contact</strong>
+          </li>
+          <li>
+            {{ svg.icon('icon-check') }} - <strong>icon-check</strong>
+          </li>
+          <li>
+            {{ svg.icon('icon-release') }} - <strong>icon-release</strong>
+          </li>
+          <li>
+            {{ svg.icon('icon-solubilization') }} - <strong>icon-solubilization</strong>
+          </li>
+          <li>
+            {{ svg.icon('icon-delivery') }} - <strong>icon-delivery</strong>
+          </li>
+          <li>
+            {{ svg.icon('icon-softgels') }} - <strong>icon-softgels</strong>
+          </li>
+          <li>
+            {{ svg.icon('icon-solutions') }} - <strong>icon-solutions</strong>
+          </li>
+          <li>
+            {{ svg.icon('icon-apis') }} - <strong>icon-apis</strong>
+          </li>
+          <li>
+            {{ svg.icon('icon-info') }} - <strong>icon-info</strong>
+          </li>
+          <li>
+            {{ svg.icon('icon-download') }} - <strong>icon-download</strong>
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="bf-fram-block">
+        <hr>
+        <p class="bf-h5">Components</p>
+        <hr>
+      </div>
+      <p>.bf-breadcrumb</p>
+      <ul class="bf-breadcrumb">
+        <li><a href="#">Category Overview</a></li>
+        <li><a href="#">Solubilization</a></li>
+        <li>Solutions & gels</li>
+      </ul>
+
+    {% include './template/_svg-icons-symbols.nj' %}
+  </body>
+
+</html>

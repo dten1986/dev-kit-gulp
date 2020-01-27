@@ -1,0 +1,15 @@
+@import './common/reset';
+@import './common/general';
+@import './common/scss-variables.scss';
+@import './common/mixins.scss';
+@import './common/css-variables';
+@import './common/_typography.scss';
+@import './common/fonts';
+
+@import './components/icons';
+@import './components/breadcrumb';
+@import './components/btns';
+@import './components/input-txt';
+@import './components/links';
+
+@import './partials/header';

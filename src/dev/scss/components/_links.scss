@@ -1,0 +1,11 @@
+@import '../common/mixins.scss';
+@import '../common/scss-variables.scss';
+
+.bf-link {
+  transition: filter .2s linear;
+  /*transition: all 0.2s;*/
+
+  &:hover {
+    filter: brightness(120%);
+  }
+}

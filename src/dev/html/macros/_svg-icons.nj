@@ -1,0 +1,7 @@
+{% macro icon(name = "") %}
+
+  <svg class="bf-icons bf-{{name}}">
+    <use xlink:href="#{{name}}"/>
+  </svg>
+
+{% endmacro %}

@@ -1,0 +1,57 @@
+@import '../common/mixins.scss';
+@import '../common/scss-variables.scss';
+
+.bf-input-txt {
+  padding: 0 10px;
+  background-color: var(--white);
+  outline: none;
+  width: 100%;
+  font-weight: 500;
+  color: var(--black-1);
+  transition: border-color .2s linear, background .2s linear;
+  border: 1px solid var(--grey-1);
+
+  &:active,
+  &:focus {
+    border-color: var(--base-color);
+  }
+
+
+  &--search {
+    padding: 0 40px 0 10px;
+  }
+}
+
+.bf-input-block {
+  display: flex;
+  position: relative;
+  width: 100%;
+
+  & > button {
+    cursor: pointer;
+  }
+
+  &__btn-clear {
+    position: absolute;
+    top: 0;
+    right: 60px;
+    width: 40px;
+    height: 40px;
+    opacity: 0.2;
+
+    &:hover {
+      opacity: 0.3;
+    }
+  }
+
+  &__btn-go {
+    height: 40px;
+    width: 60px;
+    color: var(--white);
+    background-color: var(--base-color);
+
+    &:hover {
+      filter: brightness(105%);
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import '../common/scss-variables.scss';
+@import '../common/mixins.scss';
+
+body {
+  min-width: $small;
+}
+
+body,
+html {
+  &.js-no-scroll {
+    overflow: hidden;
+  }
+}
+
+main {
+  min-height: calc(100vh - 130px);
+}
+
+.bf-wrap {
+  max-width: $wrap;
+  width: 100%;
+  margin: 0 auto;
+  padding-right: var(--halhGap);
+  padding-left: var(--halhGap);
+}
+
+.bf-icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
